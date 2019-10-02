@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="game-stats">
+            <p id="game-stats-killed">Kills: 0</p>
+            <p id="game-stats-time">Time: 0s</p>
+        </div>
+        <h1 id="game-title">UFO KILLER</h1>
+        <button id="start-btn">START</button>
+        <div id="play-field"></div>
+        <div id="win-form">
+            <h1>YOU WON!</h1>
+            <p>To play again press F5</p>
+        </div>
+        <div id="loose-form">
+            <h1>YOU LOOSE!</h1>
+            <p>To play again press F5</p>
+        </div>
+    </div>
+    <template id="boss-template">
+        <div id="boss">
+            <div class="hp-bar"></div>
+            <img src="img/boss.png">
+        </div>
+    </template>
+    <template id="ufo-template">
+        <div class="ufo">
+            <div class="hp-bar"></div>
+            <img src="img/ufo.png" alt="UFO">
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>

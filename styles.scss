@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font-family: 'Share Tech Mono', monospace;
+    
+}
+body{
+    cursor: crosshair;
+    background-image: url(/img/bg.png);
+    background-size: cover;
+    user-select: none;
+}
+#main-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    #game-title{
+        animation: text-anim 5s linear 0.3s infinite;
+        transition: all 0.3s;
+        font-size: 110px;
+        color: #ffd300;
+    }
+}
+#start-btn{
+    transition: all 0.3s;
+    border: none;
+    background-color: chocolate;
+    height: 100px;
+    width: 500px;
+    font-size: 50px;
+}
+#start-btn:hover{
+    cursor: crosshair; 
+}
+
+.ufo{
+    transition: all 3s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .hp-bar{
+        background-color: red;
+        height: 12px;
+        width: 100px;
+    }
+    img{
+        margin-top: 6px;
+        width: 110px;
+    }
+    animation: ufo-idle 2s linear 0.3s infinite;
+}
+#play-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#game-stats{
+    visibility: hidden;
+    background: #ffd300;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    p{
+        font-size: 35px;
+    }
+}
+#boss{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .hp-bar{
+        background: red;
+        height: 33px;
+        width: 400px;
+    }
+    img{
+        margin-top: 20px;
+        height: 400px;
+    }
+}
+#loose-form{
+    z-index: 999;
+    visibility: hidden;
+    background-image: url(/img/loosebg.gif);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-size: cover;
+    height: 500px;
+    width: 700px;
+    &{
+        color: #ffd300;
+    }
+    h1{
+        font-size: 90px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+#win-form{
+    z-index: 998;
+    visibility: hidden;
+    background-image: url(/img/winbg.gif);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-size: cover;
+    height: 500px;
+    width: 700px;
+    &{
+        color: #ffd300;
+    }
+    h1{
+        font-size: 90px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+
+@keyframes text-anim{
+    0% { transform: scale(0.5) rotate(0deg); }
+    25% { transform: scale(1.1) rotate(20deg); }
+    50% { transform: scale(0.5) rotate(-20deg); }
+    75% { transform: scale(1.1) rotate(20deg); }
+    100% { transform: scale(0.5) rotate(0deg); }
+}
+
+@keyframes ufo-idle{
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    75% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
+}
